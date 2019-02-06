@@ -1,6 +1,6 @@
 ﻿namespace FlowGameTest
 {
-    partial class Form1
+    partial class Flo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Flo));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.howToPlayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.highScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,65 +44,86 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.startToolStripMenuItem});
+            this.startToolStripMenuItem,
+            this.howToPlayToolStripMenuItem,
+            this.highScoreToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // startToolStripMenuItem
             // 
             this.startToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.startToolStripMenuItem1,
-            this.exitToolStripMenuItem});
+            this.startToolStripMenuItem1});
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-            this.startToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
+            this.startToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.startToolStripMenuItem.Text = "Start";
             this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
             // 
             // startToolStripMenuItem1
             // 
             this.startToolStripMenuItem1.Name = "startToolStripMenuItem1";
-            this.startToolStripMenuItem1.Size = new System.Drawing.Size(115, 26);
+            this.startToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.startToolStripMenuItem1.Text = "Start";
             this.startToolStripMenuItem1.Click += new System.EventHandler(this.startToolStripMenuItem1_Click);
             // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(115, 26);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(190, 326);
+            this.textBox1.Location = new System.Drawing.Point(145, 294);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(395, 22);
+            this.textBox1.Size = new System.Drawing.Size(297, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(640, 336);
+            this.button1.Location = new System.Drawing.Point(490, 294);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // exitToolStripMenuItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // howToPlayToolStripMenuItem
+            // 
+            this.howToPlayToolStripMenuItem.Name = "howToPlayToolStripMenuItem";
+            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.howToPlayToolStripMenuItem.Text = "How To Play";
+            // 
+            // highScoreToolStripMenuItem
+            // 
+            this.highScoreToolStripMenuItem.Name = "highScoreToolStripMenuItem";
+            this.highScoreToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.highScoreToolStripMenuItem.Text = "HighScore";
+            // 
+            // Flo
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "Flo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Flo";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -113,9 +137,11 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem startToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem howToPlayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem highScoreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
