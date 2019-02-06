@@ -22,9 +22,18 @@ namespace FlowGameTest
         {
 
             InitializeComponent();
-            addButtons();
+            //addButtons();
         }
+        public void killButtons() {
+            for (int x = 0; x < btn.GetLength(0); x++)         // Loop for x
+            {
+                for (int y = 0; y < btn.GetLength(1); y++)     // Loop for y
+                {
+                   this.Controls.Remove(btn[x, y]);
+                }
+            }
 
+                }
         public void addButtons() {
             int gridOffSetX = 50;
             int gridOffSetY = 50;
@@ -120,8 +129,8 @@ namespace FlowGameTest
         }
         private void startToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            addFlowPath(0, 0, 2, 2, Color.Red);
             
+                        
             
         }
 
@@ -133,7 +142,36 @@ namespace FlowGameTest
         private void button1_Click(object sender, EventArgs e)
         {
             convBoardToString();
+            killButtons();
 
         }
+
+        private void hardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button[,] btn = new Button[7, 7];
+            addButtons();
+        }
+
+        private void EasyRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            killButtons();
+            btn = new Button[5, 5];
+            addButtons();
+        }
+
+        private void MedRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            killButtons();
+            btn = new Button[6, 6];
+            addButtons();
+        }
+
+        private void HardRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            killButtons();
+            btn = new Button[7, 7];
+            addButtons();
+        }
+
     }
 }
