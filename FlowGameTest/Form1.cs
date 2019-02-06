@@ -13,14 +13,23 @@ namespace FlowGameTest
     public partial class Form1 : Form
     {
         Random r = new Random();
-        Button[,] btn = new Button[10, 10];       // Create 2D array of buttons
+        Button[,] btn = new Button[5, 5];       // Create 2D array of buttons
         //Button[] unkillable = new Button[25];
         List<Button> unkillable = new List<Button>();
         Boolean clickHeld = false;
         Color clickColor = Color.NavajoWhite;
         public Form1()
         {
+
             InitializeComponent();
+            addButtons();
+        }
+
+        public void addButtons() {
+            int gridOffSetX = 50;
+            int gridOffSetY = 50;
+            int buttonPosOffset = 46;
+            int buttonSize = 45;
             for (int x = 0; x < btn.GetLength(0); x++)         // Loop for x
             {
                 for (int y = 0; y < btn.GetLength(1); y++)     // Loop for y
@@ -29,7 +38,7 @@ namespace FlowGameTest
                     btn[x, y].Font = new Font(btn[x, y].Font.FontFamily, 24);
                     btn[x, y].TextAlign = ContentAlignment.MiddleRight;
                     btn[x, y].Name = Convert.ToString((x + 1) + "," + (y + 1));
-                    btn[x, y].SetBounds(50 + 46 * x + 1, 50 + 46 * y + 1, 45, 45);
+                    btn[x, y].SetBounds(gridOffSetX + buttonPosOffset * x + 1, gridOffSetY + buttonPosOffset * y + 1, buttonSize, buttonSize);
                     btn[x, y].BackColor = Color.PowderBlue;
                     //btn[x, y].Text = Convert.ToString((x + 1) + "," + (y + 1));
                     btn[x, y].Click += new EventHandler(this.btnEvent_Click);
@@ -102,19 +111,29 @@ namespace FlowGameTest
             {
                 for (int y = 0; y < btn.GetLength(1); y++)
                 {
-                    outP += btn[x, y].BackColor.ToString()+";";
-
-
+                    outP += btn[x, y].BackColor.GetHashCode()+";";
                 }
                 outP += ":";
             }
-            return "";
+            textBox1.Text = outP;
+            return outP;
         }
         private void startToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             addFlowPath(0, 0, 2, 2, Color.Red);
             
             
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            convBoardToString();
+
         }
     }
 }
