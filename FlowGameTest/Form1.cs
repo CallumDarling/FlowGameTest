@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FlowGameTest
 {
-    public partial class Form1 : Form
+    public partial class Flo : Form
     {
         Random r = new Random();
         Button[,] btn = new Button[5, 5];       // Create 2D array of buttons
@@ -18,7 +18,7 @@ namespace FlowGameTest
         List<Button> unkillable = new List<Button>();
         Boolean clickHeld = false;
         Color clickColor = Color.NavajoWhite;
-        public Form1()
+        public Flo()
         {
 
             InitializeComponent();
@@ -133,6 +133,16 @@ namespace FlowGameTest
         private void button1_Click(object sender, EventArgs e)
         {
             convBoardToString();
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void highSchoolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }
