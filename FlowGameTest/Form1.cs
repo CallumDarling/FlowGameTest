@@ -10,18 +10,22 @@ using System.Windows.Forms;
 
 namespace FlowGameTest
 {
-    public partial class Form1 : Form
+    public partial class Flo : Form
     {
         Random r = new Random();
+                
         Button[,] btn = new Button[5, 5];       // Create 2D array of buttons
         //Button[] unkillable = new Button[25];
         List<Button> unkillable = new List<Button>();
         Boolean clickHeld = false;
         Color clickColor = Color.NavajoWhite;
-        public Form1()
+        public Flo()
         {
 
             InitializeComponent();
+            this.Size = new System.Drawing.Size(600, 450);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
             //addButtons();
         }
         public void killButtons() {
@@ -34,11 +38,11 @@ namespace FlowGameTest
             }
 
                 }
-        public void addButtons() {
-            int gridOffSetX = 50;
+        public void addButtons(int bPO, int bSz) {
+            int gridOffSetX = 30;
             int gridOffSetY = 50;
-            int buttonPosOffset = 46;
-            int buttonSize = 45;
+            int buttonPosOffset = bPO;
+            int buttonSize = bSz;
             for (int x = 0; x < btn.GetLength(0); x++)         // Loop for x
             {
                 for (int y = 0; y < btn.GetLength(1); y++)     // Loop for y
@@ -148,30 +152,32 @@ namespace FlowGameTest
 
         private void hardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Button[,] btn = new Button[7, 7];
-            addButtons();
+           // Button[,] btn = new Button[7, 7];
+           // addButtons();
         }
 
         private void EasyRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             killButtons();
             btn = new Button[5, 5];
-            addButtons();
+            textBox1.Text = "5x5";
+            addButtons(64,63);
         }
 
-        private void MedRadioButton_CheckedChanged(object sender, EventArgs e)
+        private void MedRadioButton_CheckedChanged_1(object sender, EventArgs e)
         {
             killButtons();
             btn = new Button[6, 6];
-            addButtons();
+            textBox1.Text = "6x6";
+            addButtons(53,52);
         }
 
-        private void HardRadioButton_CheckedChanged(object sender, EventArgs e)
+        private void HardRadioButton_CheckedChanged_1(object sender, EventArgs e)
         {
             killButtons();
             btn = new Button[7, 7];
-            addButtons();
+            textBox1.Text = "7x7";
+            addButtons(46,45);
         }
-
     }
 }

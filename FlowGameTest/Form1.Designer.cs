@@ -1,6 +1,6 @@
 ﻿namespace FlowGameTest
 {
-    partial class Form1
+    partial class Flo
     {
         /// <summary>
         /// Required designer variable.
@@ -53,7 +53,8 @@
             this.dialogToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(584, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,27 +65,27 @@
             this.mediumToolStripMenuItem,
             this.hardToolStripMenuItem});
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-            this.startToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
+            this.startToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.startToolStripMenuItem.Text = "Start Game";
             this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
             // 
             // startToolStripMenuItem1
             // 
             this.startToolStripMenuItem1.Name = "startToolStripMenuItem1";
-            this.startToolStripMenuItem1.Size = new System.Drawing.Size(139, 26);
+            this.startToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
             this.startToolStripMenuItem1.Text = "Easy";
             this.startToolStripMenuItem1.Click += new System.EventHandler(this.startToolStripMenuItem1_Click);
             // 
             // mediumToolStripMenuItem
             // 
             this.mediumToolStripMenuItem.Name = "mediumToolStripMenuItem";
-            this.mediumToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
+            this.mediumToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.mediumToolStripMenuItem.Text = "Medium";
             // 
             // hardToolStripMenuItem
             // 
             this.hardToolStripMenuItem.Name = "hardToolStripMenuItem";
-            this.hardToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
+            this.hardToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.hardToolStripMenuItem.Text = "Hard";
             this.hardToolStripMenuItem.Click += new System.EventHandler(this.hardToolStripMenuItem_Click);
             // 
@@ -93,34 +94,36 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.instructionsToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // instructionsToolStripMenuItem
             // 
             this.instructionsToolStripMenuItem.Name = "instructionsToolStripMenuItem";
-            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
+            this.instructionsToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.instructionsToolStripMenuItem.Text = "Instructions";
             // 
             // dialogToolStripMenuItem
             // 
             this.dialogToolStripMenuItem.Name = "dialogToolStripMenuItem";
-            this.dialogToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.dialogToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.dialogToolStripMenuItem.Text = "Dialog";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 376);
+            this.textBox1.Location = new System.Drawing.Point(518, 90);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(395, 22);
+            this.textBox1.Size = new System.Drawing.Size(62, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(640, 375);
+            this.button1.Location = new System.Drawing.Point(518, 114);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(62, 19);
             this.button1.TabIndex = 2;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -129,9 +132,10 @@
             // EasyRadioButton
             // 
             this.EasyRadioButton.AutoSize = true;
-            this.EasyRadioButton.Location = new System.Drawing.Point(690, 31);
+            this.EasyRadioButton.Location = new System.Drawing.Point(518, 25);
+            this.EasyRadioButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EasyRadioButton.Name = "EasyRadioButton";
-            this.EasyRadioButton.Size = new System.Drawing.Size(60, 21);
+            this.EasyRadioButton.Size = new System.Drawing.Size(48, 17);
             this.EasyRadioButton.TabIndex = 3;
             this.EasyRadioButton.TabStop = true;
             this.EasyRadioButton.Text = "Easy";
@@ -141,30 +145,34 @@
             // MedRadioButton
             // 
             this.MedRadioButton.AutoSize = true;
-            this.MedRadioButton.Location = new System.Drawing.Point(690, 58);
+            this.MedRadioButton.Location = new System.Drawing.Point(518, 47);
+            this.MedRadioButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MedRadioButton.Name = "MedRadioButton";
-            this.MedRadioButton.Size = new System.Drawing.Size(78, 21);
+            this.MedRadioButton.Size = new System.Drawing.Size(62, 17);
             this.MedRadioButton.TabIndex = 4;
             this.MedRadioButton.TabStop = true;
             this.MedRadioButton.Text = "Medium";
             this.MedRadioButton.UseVisualStyleBackColor = true;
+            this.MedRadioButton.CheckedChanged += new System.EventHandler(this.MedRadioButton_CheckedChanged_1);
             // 
             // HardRadioButton
             // 
             this.HardRadioButton.AutoSize = true;
-            this.HardRadioButton.Location = new System.Drawing.Point(690, 85);
+            this.HardRadioButton.Location = new System.Drawing.Point(518, 69);
+            this.HardRadioButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HardRadioButton.Name = "HardRadioButton";
-            this.HardRadioButton.Size = new System.Drawing.Size(60, 21);
+            this.HardRadioButton.Size = new System.Drawing.Size(48, 17);
             this.HardRadioButton.TabIndex = 5;
             this.HardRadioButton.TabStop = true;
             this.HardRadioButton.Text = "Hard";
             this.HardRadioButton.UseVisualStyleBackColor = true;
+            this.HardRadioButton.CheckedChanged += new System.EventHandler(this.HardRadioButton_CheckedChanged_1);
             // 
-            // Form1
+            // Flo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(584, 411);
             this.Controls.Add(this.HardRadioButton);
             this.Controls.Add(this.MedRadioButton);
             this.Controls.Add(this.EasyRadioButton);
@@ -172,7 +180,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "Flo";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
