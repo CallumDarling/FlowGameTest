@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Flo));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.timerTextbox = new System.Windows.Forms.TextBox();
+            this.start = new System.Windows.Forms.Button();
             this.howToPlayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.highSchoolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Stop = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,25 +74,26 @@
             this.startToolStripMenuItem1.Text = "Start";
             this.startToolStripMenuItem1.Click += new System.EventHandler(this.startToolStripMenuItem1_Click);
             // 
-            // textBox1
+            // timerTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 272);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(297, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.timerTextbox.Location = new System.Drawing.Point(142, 272);
+            this.timerTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.timerTextbox.Name = "timerTextbox";
+            this.timerTextbox.Size = new System.Drawing.Size(297, 20);
+            this.timerTextbox.TabIndex = 1;
+            this.timerTextbox.Text = "1";
+            this.timerTextbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button1
+            // start
             // 
-            this.button1.Location = new System.Drawing.Point(480, 273);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.start.Location = new System.Drawing.Point(198, 311);
+            this.start.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(56, 19);
+            this.start.TabIndex = 2;
+            this.start.Text = "Start";
+            this.start.UseVisualStyleBackColor = true;
+            this.start.Click += new System.EventHandler(this.button1_Click);
             // 
             // howToPlayToolStripMenuItem
             // 
@@ -111,13 +115,30 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // Stop
+            // 
+            this.Stop.Location = new System.Drawing.Point(318, 311);
+            this.Stop.Margin = new System.Windows.Forms.Padding(2);
+            this.Stop.Name = "Stop";
+            this.Stop.Size = new System.Drawing.Size(56, 19);
+            this.Stop.TabIndex = 3;
+            this.Stop.Text = "Stop";
+            this.Stop.UseVisualStyleBackColor = true;
+            this.Stop.Click += new System.EventHandler(this.Stop_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Flo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Stop);
+            this.Controls.Add(this.start);
+            this.Controls.Add(this.timerTextbox);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -138,11 +159,13 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem startToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startToolStripMenuItem1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox timerTextbox;
+        private System.Windows.Forms.Button start;
         private System.Windows.Forms.ToolStripMenuItem howToPlayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem highSchoolToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Button Stop;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

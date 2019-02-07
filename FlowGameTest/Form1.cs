@@ -115,7 +115,7 @@ namespace FlowGameTest
                 }
                 outP += ":";
             }
-            textBox1.Text = outP;
+            timerTextbox.Text = outP;
             return outP;
         }
         private void startToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -132,8 +132,7 @@ namespace FlowGameTest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            convBoardToString();
-
+            timer1.Start();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -144,6 +143,16 @@ namespace FlowGameTest
         private void highSchoolToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timerTextbox.Text = timerTextbox.Text + 1;
+        }
+
+        private void Stop_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
         }
     }
 }
